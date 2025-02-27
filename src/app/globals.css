@@ -1,21 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(https://db.onlinewebfonts.com/c/03bd7255184e8e8ad4d2a521fa920b6c?family=PolySans+Neutral);
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
+/* @font-face {
+  font-family: "PolySans";
+  src: url("/public/fonts/PolySans-Neutral.c0c35f8e.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PolySansSlim";
+  src: url("/public/fonts/PolySans-Slim.79c29571.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+} */
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  @keyframes outline {
+    0% {
+      stroke-dasharray: 4500;
+      stroke-dashoffset: 4500;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .animate-outline {
+    animation: outline 4s ease-in-out infinite;
+  }
+
+  @keyframes heightGrow {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: "auto";
+    }
+  }
+
+  .animate-height {
+    animation: heightGrow 1s ease-in-out forwards;
+  }
 }
