@@ -1,49 +1,71 @@
 "use client";
-import { useEffect, useRef } from "react";
-import Animatedlogo from "../components/animated-logo";
+import { useEffect } from "react";
 import gsap from "gsap";
+import Animatedlogo from "../components/animated-logo";
 
 function Loader() {
-  const loaderRef = useRef<HTMLDivElement | null>(null);
-  const spansRef = useRef<HTMLSpanElement | null>(null);
-
   useEffect(() => {
-    if (!loaderRef.current) return;
+    const h3Elements = document.querySelectorAll(".loader h3");
 
-    const tl = gsap.timeline();
-
-    if (!spansRef.current) return;
-
-    tl.from(spansRef.current, {
-      x: 100,
-      opacity: 0,
-      duration: 1.2,
-      stagger: 0.03,
-      delay: 0.1,
-    })
-      .to(spansRef.current, {
-        x: 100,
-        duration: 0.6,
-        opacity: 0,
-        stagger: 0.03,
-      })
-      .to(loaderRef.current, {
-        duration: 0.8,
-        y: "-100%",
-        opacity: 0,
-        display: "none",
+    h3Elements.forEach((h3, index) => {
+      // Set initial positions
+      gsap.set(h3, {
+        x: index % 2 === 0 && "-100%",
       });
+
+      // Create animation based on index parity
+      if (index % 2 === 0) {
+        // Even indices (0, 2, 4...)
+        gsap.to(h3, {
+          x: "-100%",
+          duration: 15,
+          ease: "none",
+          repeat: -1,
+          opacity: 0.7,
+        });
+      } else {
+        // Odd indices (1, 3, 5...)
+        gsap.to(h3, {
+          x: "100%",
+          duration: 15,
+          ease: "none",
+          repeat: -1,
+          opacity: 0.7,
+        });
+      }
+    });
   }, []);
 
   return (
-    <div
-      ref={loaderRef}
-      className="loader absolute z-50 h-screen bg-neutral-100 w-full flex justify-center items-center "
-    >
-      <Animatedlogo />
-      <h3 className="text-2xl uppercase font-thin text-burntumber loader">
-        <span ref={spansRef}>ForeFront Industrial Solutions</span>
-      </h3>
+    <div className="loader absolute z-50 h-screen bg-white w-full flex flex-col justify-center gap-10 items-center text-burntumber uppercase text-[7vw] font-medium overflow-hidden tracking-widest">
+      <div className="w-full overflow-hidden whitespace-nowrap">
+        <h3 className="inline-block">
+          Forefront Industrial Solutions • Forefront Industrial Solutions •
+          Forefront Industrial Solutions •
+        </h3>
+      </div>
+      <div className="w-full overflow-hidden whitespace-nowrap">
+        <h3 className="inline-block">
+          Forefront Industrial Solutions • Forefront Industrial Solutions •
+          Forefront Industrial Solutions •
+        </h3>
+      </div>
+      <div className="w-full overflow-hidden whitespace-nowrap">
+        <h3 className="inline-block">
+          Forefront Industrial Solutions • Forefront Industrial Solutions •
+          Forefront Industrial Solutions •
+        </h3>
+      </div>
+      <div className="w-full overflow-hidden whitespace-nowrap">
+        <h3 className="inline-block">
+          Forefront Industrial Solutions • Forefront Industrial Solutions •
+          Forefront Industrial Solutions •
+        </h3>
+      </div>
+
+      <div className="absolute left-1/2 top-1/2 p-20 shadow-xl bg-white -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
+        <Animatedlogo />
+      </div>
     </div>
   );
 }
