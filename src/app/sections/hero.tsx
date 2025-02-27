@@ -94,39 +94,10 @@ export default function Hero() {
       ></div>
       {/* Overlay Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-end mb-28 text-white text-center z-20 inner-content">
-        <h1 className="text-8xl  uppercase tracking-widest mb-6 font-extrabold ">
-          <span>F</span>
-          <span>o</span>
-          <span>r</span>
-          <span>e</span>
-          <span>f</span>
-          <span>r</span>
-          <span>o</span>
-          <span>n</span>
-          <span>t</span>
-          <span> </span>
-          <span>i</span>
-          <span>n</span>
-          <span>d</span>
-          <span>u</span>
-          <span>s</span>
-          <span>t</span>
-          <span>r</span>
-          <span>i</span>
-          <span>a</span>
-          <span>l</span>
-          <span> </span>
-          <span>s</span>
-          <span>o</span>
-          <span>l</span>
-          <span>u</span>
-          <span>t</span>
-          <span>i</span>
-          <span>o</span>
-          <span>n</span>
-          <span>s</span>
+        <h1 className="2xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl sm:text-5xl text-2xl uppercase tracking-widest mb-6 font-extrabold ">
+         Forefront Industrial solutions
         </h1>
-        <p className="text-xl uppercase font-light tracking-widest">
+        <p className="2xl:text-xl xl:text:xl lg:text-xl md:text-xl sm:text-xs text-xs uppercase font-light md:tracking-widest">
           Excellence in Innovation. Reliability in Solutions
         </p>
       </div>
