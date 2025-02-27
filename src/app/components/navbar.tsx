@@ -8,11 +8,12 @@ function Navbar() {
         <div className=" flex gap-1 justify-center items-end">
           <Image
             src="/assets/logo.svg"
+            
             alt="Forefront Industrial Solutions"
             width={50}
             height={50}
           />
-          <span className=" text-burntumber">
+          <span className="hidden sm:block sm:text-white ">
             Forefront Industrial solutions
           </span>
         </div>
