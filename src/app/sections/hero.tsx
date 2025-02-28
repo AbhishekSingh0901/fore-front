@@ -93,9 +93,9 @@ export default function Hero() {
         ref={cursorRef}
       ></div>
       {/* Overlay Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-end mb-28 text-white text-center z-20 inner-content">
+      <div className="absolute inset-0 flex flex-col items-center justify-end mb-28 text-white text-center z-20 inner-content px-3 mx-auto">
         <h1 className="2xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl sm:text-5xl text-2xl uppercase tracking-widest mb-6 font-extrabold ">
-         Forefront Industrial solutions
+          Forefront Industrial solutions
         </h1>
         <p className="2xl:text-xl xl:text:xl lg:text-xl md:text-xl sm:text-xs text-xs uppercase font-light md:tracking-widest">
           Excellence in Innovation. Reliability in Solutions

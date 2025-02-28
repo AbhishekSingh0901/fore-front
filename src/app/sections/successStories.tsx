@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-function successStories() {
-  return (
-    <div>successStories</div>
-  )
+function SuccessStories() {
+  return <div>SuccessStories</div>;
 }
 
-export default successStories
+export default SuccessStories;
