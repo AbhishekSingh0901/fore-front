@@ -93,17 +93,20 @@ export default function Hero() {
         ref={cursorRef}
       ></div>
       {/* Overlay Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-end mb-28 text-white text-center z-20 inner-content px-3 mx-auto">
-        <h1 className="2xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl sm:text-5xl text-2xl uppercase tracking-widest mb-6 font-extrabold ">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-[#fffafb] text-center z-20 inner-content px-4 mx-auto">
+        <h1 className="xl:text-8xl text-5xl tracking-wide  uppercase xl-mb-10 lg:mb-8 md:mb-6 mb-4 font-medium">
           Forefront Industrial solutions
         </h1>
-        <p className="2xl:text-xl xl:text:xl lg:text-xl md:text-xl sm:text-xs text-xs uppercase font-light md:tracking-widest">
+        <p className="md:text-xl text-neutral-300 uppercase font-light md:tracking-widest">
           Excellence in Innovation. Reliability in Solutions
         </p>
+        <button className="bg-burntumber text-white px-8 lg:px-10 py-3  lg:py-4 mt-4 md:mt-8 lg:mt-10 rounded-sm uppercase font-light lg:text-lg">
+          Let&apos;s Connect!
+        </button>
       </div>
 
       {/* Dark Overlay for Better Contrast */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#000000e3] to-transparent bg-opacity- z-0" />
+      <div className="absolute inset-0 bg-black bg-opacity-70 z-0" />
     </div>
   );
 }

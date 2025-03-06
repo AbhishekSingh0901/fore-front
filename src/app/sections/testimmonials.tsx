@@ -41,11 +41,11 @@ function Testimmonials() {
     },
   ];
   return (
-    <div className="w-full my-16 bg-neutral-100 py-10">
-      <div className="px-8 mx-auto max-w-7xl">
-        <h2 className=" mt-20 mb-12 text-5xl font-polySans">
-          Our Clients Love us
-        </h2>
+    <div className="w-full my-16 bg-neutral-100 pt-10">
+      <h2 className="mt-8 md:mt-20 mb-12 text-5xl lg:text-8xl font-polySans px-4">
+        Our Clients Love us
+      </h2>
+      <div className="mx-auto max-w-7xl">
         <AnimatedTestimonials testimonials={testimonials} />
       </div>
     </div>

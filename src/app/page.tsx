@@ -8,7 +8,7 @@ import Testimmonials from "./sections/testimmonials";
 
 export default function Home() {
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <Navbar />
       {/* <Loader /> */}
       <Hero />

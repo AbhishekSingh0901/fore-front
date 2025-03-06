@@ -3,21 +3,20 @@ import React from "react";
 
 function Navbar() {
   return (
-    <div className="absolute top-0 w-full z-40  rounded-l-xl px-10 py-4">
+    <div className="absolute top-0 w-full z-40  rounded-l-xl px-4 md:px-10 py-4">
       <div className="flex justify-between items-center rounded-l-xl">
         <div className=" flex gap-1 justify-center items-end">
           <Image
             src="/assets/logo.svg"
-            
             alt="Forefront Industrial Solutions"
             width={50}
             height={50}
           />
-          <span className="hidden sm:block sm:text-white ">
+          <span className="hidden sm:block text-white ">
             Forefront Industrial solutions
           </span>
         </div>
-        <h4 className="text-xl cursor-pointer">Menu</h4>
+        <h4 className="text-xl cursor-pointer text-white">Menu</h4>
       </div>
     </div>
   );
